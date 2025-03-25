@@ -1,0 +1,128 @@
+:root{
+    --width: 100px;
+    --radius: 25px;
+    --primary: darkblue;
+    --secondary: orange;
+    --tertiary: teal;
+  --height:50px;
+    --border_radius: 25px;
+    --image: 50px;
+}
+
+body {
+  background-color: rgb(243, 241, 241);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: black;
+  }
+}
+
+nav{
+  justify-content: space-between;
+  display: flex;
+  border-top: 0.01cm solid var(--primary);
+  height: var(--height);
+  border-left: 0.01cm solid var(--primary);
+  img{
+    width: var(--image);
+    height: var(--image);
+    border-radius: var(--border_radius);
+  
+  }
+  .open{
+    margin-top:12px ;
+    width: calc(var(--width)*0.5);
+    height: calc(var(--height)*0.5);
+    outline: none;
+    border-radius: var(--radius);
+    background: linear-gradient(24deg,var(--primary),var(--secondary),var(--tertiary));
+    background-clip: text;
+    filter: drop-shadow(1px 1px var(--primary));
+  }
+  .menu{
+    background: transparent;
+    display: none;
+    justify-self: right;
+    list-style-type:none;
+    border: 0.01cm solid var(--primary);
+    width: max-content;
+    height: calc(var(--height)*2.5);
+    padding: 12px;
+    z-index: 100;
+    border-bottom-left-radius: var(--border_radius);
+    border-bottom-right-radius: var(--border_radius);
+    li{
+      padding: 4px;
+    }
+    a {
+      text-decoration: none;
+      margin: 12px;
+      color: var(--secondary);
+     } 
+     a:hover{
+      font-size: medium;
+      text-decoration: none;
+      margin: 12px;
+      color: var(--secondary);
+     }
+     .close{
+      outline: none;
+      border-radius: var(--radius);
+      background: linear-gradient(24deg,var(--primary),var(--secondary),var(--tertiary));
+      background-clip: text;
+      filter: drop-shadow(1px 1px var(--primary));
+
+     }
+
+  }
+
+}
+
+#dialogact{
+background: transparent;
+outline: none;
+border: 0.01cm solid var(--primary);
+border-radius:calc( var(--border_radius)*0.5);
+}
+#dialog{
+  border-radius: var(--border_radius);
+  height: 300px;
+  width: 150px;
+  background: rgba(0, 0,0, 0.5);
+  #cls{
+    background: transparent;
+    border-radius: var(--border_radius);
+    color: var(--secondary);
+  position: absolute;
+  top: 300px;
+  left: 75px;
+  }
+  #imgsc{
+position: absolute;
+left: 62px;
+
+  }
+  #info{
+    border: 0.01cm solid var(--primary);
+    position: absolute;
+    top: 100px;
+    width: 150px;
+    height: 200px;
+    border-radius: var(--border_radius);
+    p{
+      color: var(--secondary);
+      margin-left: 4px;
+      margin-right: 4px;
+      border: 0.01cm solid var(--primary);
+      border-radius: calc(var(--border_radius)*0.3);
+    }
+  }
+  
+}
+
+
+
+
+

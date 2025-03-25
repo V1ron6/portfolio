@@ -1,0 +1,32 @@
+:root{
+    --width: 100px;
+    --radius: 25px;
+    --primary: darkblue;
+    --secondary: orange;
+    --tertiary: teal;
+  --height:50px;
+    --border_radius: 25px;
+    --image: 50px;
+}
+
+
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+     minmax(300px, 1fr)
+     )
+     ;
+    gap: 4px;
+    margin-top: 8px;
+    
+ 
+}
+iframe{
+    background-color: var(--primary);
+    margin-top: 10px;
+    margin-left: 2px;
+    border-radius: var(--border_radius);
+}
+
